@@ -10,8 +10,8 @@ def index():
 	hostname = socket.gethostname()
 	# 获取本机ip
 	ip = socket.gethostbyname(hostname)
-	return  f'hello {ip}.'
+	return  f'hello IP:{ip} CONTAINERID:{hostname}'
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0')
+	app.run(host='0.0.0.0', debug=True)
