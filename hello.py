@@ -6,11 +6,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	# 获取本机计算机名称
-	hostname = socket.gethostname()
-	# 获取本机ip
-	ip = socket.gethostbyname(hostname)
-	return  f'hello IP:{ip} CONTAINERID:{hostname}'
+	h = request.headers
+    	h = str(h).replace('\n', '</br>')
+    	return f'{h}'
 
 
 if __name__ == '__main__':
