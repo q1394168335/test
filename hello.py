@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	h = request.headers
-    	h = str(h).replace('\n', '</br>')
-    	return f'{h}'
+    h = str(h).replace('\n', '</br>')
+    return f'{h}'
 
 
 if __name__ == '__main__':
