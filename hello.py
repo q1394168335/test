@@ -4,7 +4,7 @@ import socket
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     h = request.headers
     h = str(h).replace('\n', '</br>')
