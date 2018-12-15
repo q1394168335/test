@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     h = request.headers
-    h = str(h).replace('\n', '</br>')
+    h = str(h).replace('\n', ' </br>')
     return f'{h}'
 
 
